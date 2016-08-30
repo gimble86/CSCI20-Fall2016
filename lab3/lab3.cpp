@@ -32,9 +32,9 @@ int main()
     cout << endl;
     
     //Produce mad lib paragraph
-    cout << "Once upon a time " << name << " was feeling extra classy after drinking a whole lot of chardonnay, so naturally he decided to go to Taco Bell. " << endl;
-    cout << "When " << name << " arrived, he tried to order " << real << " tacos. Confused, the Taco Bell employee replied \"I'm sorry but we only serve whole tacos here...\"" << endl;
-    cout << "Disappointed, " << name << " decided to order " << integer << " tacos instead. As he was leaving, " << name << " at the Taco Bell employee that he was a big " << letter << endl;
-    cout << "and sped off. The Taco Bell employee was very confused by the experience.";
+    cout << "Once upon a time " << name << " was feeling extra classy after drinking a whole lot of chardonnays, so naturally it was time to go to Taco Bell. " << endl;
+    cout << name << " arrived, and tried to order " << real << " tacos. Confused, the Taco Bell employee replied \"I'm sorry but we only serve whole tacos here...\"" << endl;
+    cout << "Disappointed, " << name << " decided to order " << integer << " tacos instead. While leaving, " << name << " shouted at the Taco Bell employee that he was a big " << letter << endl;
+    cout << "and sped off. The Taco Bell employee decided he was ready for a new job.";
 
 }
