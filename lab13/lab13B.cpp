@@ -1,5 +1,5 @@
-//
-//
+//Ryan Gimble 10-11-16
+//Lab 13A uses for loop, accepts user entered times and prints every 15 minutes between start time and end time.
 
 #include <iostream>
 #include <string>
@@ -24,7 +24,7 @@ int main(){
     
     
 
-    
+    //Loop prints every minute between the time 1 pm and 2:59 pm
     // while (timeCounter >= minSeconds && timeCounter <= maxSeconds){
     //     minutes = SecondsToMinutes(timeCounter);
     //     hours = SecondsToHours(timeCounter);
@@ -52,6 +52,7 @@ int main(){
     maxSeconds = HourToSeconds(endHour, endAMPM);
     timeCounter = minSeconds;
     
+    // loop takes a user entered start and finish time and prints every minute between
     for (timeCounter = minSeconds; timeCounter <= maxSeconds; timeCounter = timeCounter + 60){
         minutes = SecondsToMinutes(timeCounter);
         hours = SecondsToHours(timeCounter);
@@ -84,6 +85,7 @@ int main(){
     return 0;
 }
 
+// takes seconds remaining after hours have been divided out and converts them into minutes
 int SecondsToMinutes(int timeCounter){
     int minutes_;
     
@@ -92,7 +94,7 @@ int SecondsToMinutes(int timeCounter){
     return minutes_;
 }
 
-
+// takes seconds and converts them into hours
 int SecondsToHours(int timeCounter){
     int hours_;
     
@@ -102,6 +104,7 @@ int SecondsToHours(int timeCounter){
     
 }
 
+//Converts user entered hours into seconds
 int HourToSeconds(int Hour_, string AMPM){
     int seconds_;
     
@@ -124,6 +127,7 @@ int HourToSeconds(int Hour_, string AMPM){
     return seconds_;
 }
 
+//deterimes if a user entered time is in the am or pm
 string AMPM(int timeCounter_){
     string ampm = "0";
     
