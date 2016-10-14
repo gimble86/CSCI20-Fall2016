@@ -1,5 +1,5 @@
-//
-//
+//Ryan Gimble 10-13-16
+//Game has user pick two numbers and then generates a random number between those two numbers.  User then has to guess the number.
 
 #include <iostream>
 #include <time.h>
@@ -17,6 +17,7 @@ int main(){
     int counter = 0;
     int keepPlaying = 0;
     
+    // loop keeps the game going until the user enters 1 to quit the game.
     while(keepPlaying != 1){
     
         cout << "Please enter a minimum number: ";
@@ -26,6 +27,7 @@ int main(){
         winningNumber = RandomNumber(minNumber, maxNumber);
         cout << endl;
     
+        // loop comares the users input with the random number and tells the user if their guess was high/low or correct.
         while(userNumber != winningNumber){
             
             cout << "Try and guess a number between the two numbers you chose: ";
@@ -57,6 +59,7 @@ int main(){
     return 0;
 }
 
+//function accepts user min number and max number and then generates a number between those numbers. returns the random number.
 int RandomNumber(int minNumber, int maxNumber){
     srand(time(0));
     
