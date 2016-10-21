@@ -46,5 +46,8 @@ int main() {
     //if (grade < minimum) looks like a problem because it grade is initialized to zero.  initiallized minimum to 1000 instead since that should be out of range of any grading scale. 
     //entering negative 1 into grade causes total to be wrong
     //created new variable and if statement in loop to correct problem created by entering -1 into grade
+    // changed total into a double type variable so that average would include a decimal.
+    //initially commenting parts of the program and troubleshooting components such as the loop and if statements one at a time worked the best because it allowed me to fix things one at a time
+    //debugging is important because it is the process of making sure the program output is accurate.  If output is inaccurate, the purpose of a program is defeated.
     
 }
