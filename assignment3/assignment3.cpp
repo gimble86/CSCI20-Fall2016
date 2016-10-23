@@ -46,7 +46,6 @@ int main(){
         cout << "Please enter a max number: ";
         game1.SetMaxNumber();
         game1.SetWinningNumber(game1.GetMinNumber(), game1.GetMaxNumber());
-        cout << game1.GetWinningNumber();
         cout << endl;
     
         // loop comares the users input with the random number and tells the user if their guess was high/low or correct.
