@@ -7,51 +7,61 @@ using namespace std;
 
 int main() {
     
-    //declaration of arrays
+    //declaration of arrays and variables
     char firstName[11] = "";
     char lastName[21] = "";
     char userName1[31] = "";
     char userName2[31] = "";
     char userName3[31] = "";
+    int keepGoing = 0;
     
-    //getting user input
-    cout << "\nPlease enter a first name less than 10 characters: ";
-    cin >> firstName;
+    while(keepGoing != 1){
     
-    //loop checks to make sure user input is not too big.
-    while (strlen(firstName) > 10){
-        cout << "Too many characters!";
+        //getting user input
         cout << "\nPlease enter a first name less than 10 characters: ";
         cin >> firstName;
-    }
+        cout << endl;
         
-    
-    cout << "Please enter a last name less than 20 characters: ";
-    cin >> lastName;
-    
-    //loop checks to make sure user input is not too big.
-    while (strlen(lastName) > 20){
-        cout << "Too many characters!";
-        cout << "\nPlease enter a last name less than 20 characters: ";
+        //loop checks to make sure user input is not too big.
+        while (strlen(firstName) > 10){
+            cout << "Too many characters!";
+            cout << "\nPlease enter a first name less than 10 characters: ";
+            cin >> firstName;
+        }
+            
+        
+        cout << "Please enter a last name less than 20 characters: ";
         cin >> lastName;
+        cout << endl;
+        
+        //loop checks to make sure user input is not too big.
+        while (strlen(lastName) > 20){
+            cout << "Too many characters!";
+            cout << "\nPlease enter a last name less than 20 characters: ";
+            cin >> lastName;
+        }
+        
+        //if the user enters two of the same name if statment outputs a warning
+        if(strcmp(firstName, lastName) == 0) {
+            cout << "Waring! First Name and last name are the same!";
+        }
+        
+        cout << "Name: " << firstName << " " << lastName << ":" << endl << endl;
+        cout << "Which of the three usernames would you like?\n" << endl;
+        
+        //setup possible usernames
+        strcpy(userName1, firstName);
+        strcpy(userName2, firstName);
+        strcpy(userName3, lastName);
+        
+        //output usernames
+        cout << strcat(userName1, lastName) << endl;
+        cout << strncat(userName2, lastName, 1) << endl;
+        cout << strncat(userName3, firstName, 1) << endl << endl;
+        cout << "To enter another name enter 0, to quit enter 1: " << endl;
+        cin >> keepGoing;
+        
     }
-    
-    //if the user enters two of the same name if statment outputs a warning
-    if(strcmp(firstName, lastName) == 0) {
-        cout << "Waring! First Name and last name are the same!";
-    }
-    
-    cout << "Which of the three usernames would you like?\n" << endl;
-    
-    //setup possible usernames
-    strcpy(userName1, firstName);
-    strcpy(userName2, firstName);
-    strcpy(userName3, lastName);
-    
-    //output usernames
-    cout << strcat(userName1, lastName) << endl;
-    cout << strncat(userName2, lastName, 1) << endl;
-    cout << strncat(userName3, firstName, 1) << endl;
     
     return 0;
 }
